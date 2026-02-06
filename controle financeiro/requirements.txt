@@ -1,0 +1,8 @@
+flask
+gunicorn
+reportlab
+sqlite3
+fpdf
+io
+tempfile
+datetime

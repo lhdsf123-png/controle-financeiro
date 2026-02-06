@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Controle de Gastos</title>
+</head>
+<body>
+    <h1>Controle de Gastos</h1>
+    <p><strong>Lucro Bruto:</strong> R$ {{ lucro_bruto }}</p>
+    <p><strong>Lucro Líquido:</strong> R$ {{ lucro_liquido }}</p>
+
+    <h2>Transações</h2>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Tipo</th>
+            <th>Valor</th>
+            <th>Categoria</th>
+        </tr>
+        {% for t in transacoes %}
+        <tr>
+            <td>{{ t[1] }}</td>
+            <td>R$ {{ t[2] }}</td>
+            <td>{{ t[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/adicionar">Adicionar Transação</a><br>
+    <a href="/relatorio">Ver Relatório</a><br>
+    <a href="/exportar_pdf">Exportar PDF</a>
+</body>
+</html>
