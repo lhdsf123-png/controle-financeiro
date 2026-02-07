@@ -2,6 +2,5 @@ flask
 gunicorn
 reportlab
 fpdf
-io
 tempfile
 datetime
