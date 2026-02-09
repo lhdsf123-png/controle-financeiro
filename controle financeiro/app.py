@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 app = Flask(__name__)
-
+app.secret_key = "segredo123"
 
 def init_db():
     conn = sqlite3.connect("gastos.db")
@@ -191,4 +191,5 @@ def exportar_pdf():
 
 if __name__ == "__main__":
     init_db()
+
     app.run(debug=True)
